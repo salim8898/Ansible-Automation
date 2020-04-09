@@ -1,0 +1,8 @@
+- hosts: salim
+  become: true
+  strategy: free
+  tasks:
+    - name: checkout data
+      shell:  cat /data/hosts ; hostname
+      register: out
+    - debug: var=out.stdout_lines

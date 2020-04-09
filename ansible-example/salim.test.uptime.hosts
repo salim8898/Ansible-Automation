@@ -1,0 +1,12 @@
+[all:vars]
+ansible_connection=ssh
+become_method=sudo
+
+ansible_user=username
+ansible_ssh_pass=password
+ansible_become_pass=password
+
+[salim]
+server1
+server2
+server3

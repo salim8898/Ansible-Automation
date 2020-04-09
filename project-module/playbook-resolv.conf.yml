@@ -1,0 +1,11 @@
+-
+  name: Add line in resolv.conf file
+  hosts: all
+  vars_files:
+    - var_resolv
+  tasks:
+    - lineinfile: 
+        path: /etc/resolv.conf
+        line: 'nameserver {{ dns_server }}'
+        state: present
+      become: yes

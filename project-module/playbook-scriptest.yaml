@@ -1,0 +1,6 @@
+-
+  name: Execute script of remote hosts
+  hosts: all
+  tasks:
+    - name: copy and execute script on servers
+      script: /tmp/my_script.sh

@@ -1,0 +1,14 @@
+-
+  name: Install apache2 on hosts
+  hosts: all
+  tasks:
+    - name: update server
+      apt:
+        name: apache2
+        state: present
+      become: yes
+    - name: enable service
+      service:
+        name: apache2
+        state: started
+      become: yes
